@@ -1,8 +1,11 @@
 var step = Math.floor(Math.random()*13) + 1;
-$('#roll, #XMLID_654_').on('click', function(event) {
+$('#roll').mouseenter(function() {
+	$(this).addClass('animated shake');
+}).mouseleave(function() {
+	$(this).removeClass('animated shake')
+}).on('click', function(event) {
 	step = Math.floor(Math.random()*13);
 });
-console.log('showing step ' + step);
 switch (step) {
 	case 1:
 	$('.thank').removeClass('hidden').addClass('animated fadeIn');
@@ -40,9 +43,9 @@ switch (step) {
 	default:
 	$('.smile').removeClass('hidden').addClass('animated fadeIn');
 }
-$('section h1').addClass('animated pulse');
-$('section i, section div img').mouseover(function() {
-	$(this).addClass('animated rubberBand');
+$('h1').addClass('animated pulse');
+$('section i, div img').mouseover(function() {
+	$(this).addClass('animated swing');
 }).mouseleave(function(){
-	$(this).removeClass('animated rubberBand');
+	$(this).removeClass('animated swing');
 });

@@ -19,6 +19,15 @@ i, div img {
 i + i, a + a {
 	padding-left: 2.5rem;
 }
+/* grid icon */
+nav i { 
+	position: absolute;
+	margin-top: 2%;
+	margin-left: 2%;
+	color: white;
+	opacity: 0.7;
+	z-index: 100;
+}
 /* 1. thank */
 .thank {
 	background: url('../img/thank.jpg') no-repeat;
