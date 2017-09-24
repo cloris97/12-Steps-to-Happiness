@@ -2,14 +2,22 @@ body {
 	background: initial;
 	box-sizing: border-box;
 }
-/* .hidden {
+.hidden {
 	display: none;
-} */
+}
 h1 {
 	margin-top: 0;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
 }
-i {
-	padding-right: 1em;
+i, div img {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+i + i, a + a {
+	padding-left: 2.5rem;
 }
 /* 1. thank */
 .thank {
@@ -89,4 +97,147 @@ i {
 }
 .hike div {
 	margin-left: 77.5%;
+}
+/* 5. help */
+.help {
+	background: url('../img/help.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 50%;
+	background-size: cover;
+}
+.help h1, .help p {
+	color: #ECECEE;
+	margin-left: -45%;
+}
+.help h1 {
+	padding-top: 2%;
+}
+/* 6. meditate */
+.meditate {
+	background: url('../img/meditation.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 90%;
+	background-size: cover;
+}
+.meditate h1, .meditate p {
+	color: #9C5C6E;
+}
+.meditate h1 {
+	padding-top: 32%;
+}
+.meditate div {
+	display: flex;
+	justify-content: center;
+}
+/* 7. eat well */
+.eat {
+	background: url('../img/eat.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 50%;
+	background-size: cover;
+}
+.eat h1, .eat p, .eat div {
+	color: #E3DEC7;
+	margin-left: 15%;
+}
+.eat h1 {
+	padding-top: 32%;
+}
+.eat div {
+	display: flex;
+	justify-content: center;
+}
+/* 8.socialize */
+.socialize {
+	background: url('../img/socialize.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 60%;
+	background-size: cover;
+}
+.socialize h1, .socialize p, .socialize i{
+	color: #FEE4A8;
+}
+.socialize h1 {
+	padding-top: 28%;
+}
+.socialize div {
+	display: flex;
+	justify-content: center;
+}
+/* 9. exercise */
+.exercise {
+	background: url('../img/exercise.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 50%;
+	background-size: cover;
+}
+.exercise h1, .exercise p, .exercise i{
+	color: #DAD7D5;
+}
+.exercise h1 {
+	padding-top: 5%;
+}
+.exercise h1, .exercise p, .exercise div {
+	margin-left: -55%;
+}
+.exercise div {
+	display: flex;
+	justify-content: center;
+}
+/* 10. aim */
+.aim {
+	background: url('../img/aim.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 30%;
+	background-size: cover;
+}
+.aim h1, .aim p, .aim i{
+	color: #000000;
+}
+.aim h1 {
+	padding-top: 20%;
+}
+.aim div {
+	display: flex;
+	justify-content: center;
+}
+/* 11. rest */
+.rest {
+	background: url('../img/rest.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 40%;
+	background-size: cover;
+}
+.rest h1, .rest p {
+	color: #EAFFF6;
+	margin-left: -55%;
+}
+.rest h1 {
+	padding-top: 15%;
+}
+.rest div {
+	display: flex;
+	justify-content: center;
+}
+/* 12. smile */
+.smile {
+	background: url('../img/smile.jpg') no-repeat;
+	height: 100vh;
+	width: 100vw;
+	background-position: 0 60%;
+	background-size: cover;
+}
+.smile h1, .smile p {
+	color: #A12F0B;
+	margin-left: 60%;
+}
+.smile h1 {
+	padding-top: 20%;
 }
