@@ -46,3 +46,6 @@ $('div.twelve').on('click', function(event) {
 	sessionStorage.setItem("rolled", 12);
 	window.location.replace("steps.html");
 });
+$('#shuffle').on('click', function() {
+	window.location.replace("steps.html");
+})

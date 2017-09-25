@@ -67,14 +67,11 @@ function switchShow(n) {
 	}
 }
 switchShow(parseInt(sessionStorage.getItem("rolled")));
-console.log('stored '+parseInt(sessionStorage.getItem("rolled")));
+// console.log('stored '+parseInt(sessionStorage.getItem("rolled")));
 $('#shuffle').on('click', function() {
 	var step = roll();
 	sessionStorage.setItem("rolled", step);
 	console.log('step '+step);
-	if (window.location.href === 'https://cloris97.github.io/happiness/grid.html') {
-		window.location.replace('steps.html');
-	}
 	switchShow(step);
 })
 // animation
