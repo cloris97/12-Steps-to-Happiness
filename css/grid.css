@@ -18,7 +18,7 @@ nav a + i {
 	margin-left: -2%;
 }
 .container-fluid {
-	padding: 5% 2% 2%;
+	padding: 5.5% 2% 2%;
 	background: #232526;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(#434343, black); 
 	background: linear-gradient(#434343, black); 
@@ -33,5 +33,16 @@ nav a + i {
 	font-family: 'Permanent Marker', sans-serif;
 	font-size: 2rem;
 	text-shadow: 1px 1px 1px #202020;
-	margin-top: 5rem;
+	margin-top: 8rem;
+	cursor: pointer;
+}
+.btn {
+	background-color: silver;
+	border: none;
+}
+.btn:hover {
+	background-color: lightgreen;
+}
+.btn:active {
+	background-color: green;
 }

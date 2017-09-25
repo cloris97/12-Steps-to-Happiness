@@ -2,8 +2,7 @@ function roll() {
 	// return a number from 1 to 12.
 	return Math.floor(Math.random()*12) + 1;
 }
-var step = parseInt(sessionStorage.getItem("rolled"));
-console.log('showing section '+step);
+// var step = parseInt(sessionStorage.getItem("rolled"));
 function switchShow(n) {
 	switch (n) {
 		case 1:
@@ -55,10 +54,17 @@ function switchShow(n) {
 		$('section').not('.smile, .hidden').addClass('hidden').removeClass('animated fadeIn');
 	}
 }
-switchShow(step);
+switchShow(parseInt(sessionStorage.getItem("rolled")));
 $('#shuffle').on('click', function() {
-	step = roll();
+	var step = roll();
 	sessionStorage.setItem("rolled", step);
+	window.location.replace("steps.html");
 	switchShow(step);
-	// console.log('showing '+step);
+	console.log(step);
 })
+// animation
+$('nav i').mouseover(function() {
+	$(this).css('opacity', '1').addClass('animated tada');
+}).mouseleave(function(){
+	$(this).css('opacity', '0.7').removeClass('animated tada');
+});
