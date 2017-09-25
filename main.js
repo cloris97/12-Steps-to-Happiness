@@ -1,6 +1,18 @@
+var uniqueRandoms = [];
+var numRandoms = 12;
 function roll() {
-	// return a number from 1 to 12.
-	return Math.floor(Math.random()*12) + 1;
+    // refill the array if needed
+    if (!uniqueRandoms.length) {
+    	for (var i = 1; i <= numRandoms; i++) {
+    		uniqueRandoms.push(i);
+    	}
+    }
+    var index = Math.floor(Math.random() * uniqueRandoms.length);
+    var val = uniqueRandoms[index];
+    // now remove that value from the array
+    uniqueRandoms.splice(index, 1);
+    console.log('random '+index)
+    return val;
 }
 // var step = parseInt(sessionStorage.getItem("rolled"));
 function switchShow(n) {
@@ -55,12 +67,15 @@ function switchShow(n) {
 	}
 }
 switchShow(parseInt(sessionStorage.getItem("rolled")));
+console.log('stored '+parseInt(sessionStorage.getItem("rolled")));
 $('#shuffle').on('click', function() {
 	var step = roll();
 	sessionStorage.setItem("rolled", step);
-	window.location.replace("steps.html");
+	console.log('step '+step);
+	if (window.location.href === 'https://cloris97.github.io/happiness/grid.html') {
+		window.location.replace('steps.html');
+	}
 	switchShow(step);
-	console.log(step);
 })
 // animation
 $('nav i').mouseover(function() {
