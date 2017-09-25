@@ -45,6 +45,18 @@
 	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 	crossorigin="anonymous"></script>
 	<!-- js -->
-	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript">
+		$('#roll').mouseenter(function() {
+			$(this).addClass('animated shake');
+			$(this).click(function(event) {
+				sessionStorage.removeItem("rolled");
+				var n = Math.floor(Math.random()*12) + 1;
+				sessionStorage.setItem("rolled", n);
+		// console.log(sessionStorage.getItem("rolled"));
+	});
+		}).mouseleave(function() {
+			$(this).removeClass('animated shake');
+		});
+	</script>
 </body>
 </html>

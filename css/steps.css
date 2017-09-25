@@ -1,5 +1,6 @@
 body {
 	background: initial;
+	background-color: black;
 	box-sizing: border-box;
 }
 .hidden {
@@ -19,14 +20,23 @@ i, div img {
 i + i, a + a {
 	padding-left: 2.5rem;
 }
-/* grid icon */
-nav i { 
+/* small nav section with Fontawesome icons*/
+nav {
 	position: absolute;
-	margin-top: 2%;
-	margin-left: 2%;
-	color: white;
-	opacity: 0.7;
 	z-index: 100;
+	width: 200px;
+}
+nav i { 
+	display: inline-block;
+	margin: 10%;
+	color: lightgray;
+	opacity: 0.7;
+	cursor: pointer;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+nav a + i {
+	margin-left: -2%;
 }
 /* 1. thank */
 .thank {
@@ -54,14 +64,14 @@ nav i {
 	background: url('../img/experience.jpg') no-repeat;
 	height: 100vh;
 	width: 100vw;
-	background-position: 0 30%;
+	background-position: 0 50%;
 	background-size: cover;
 }
 .experience h1, .experience p, .experience i{
 	color: #FFCEAC;
 }
 .experience h1 {
-	padding-top: 5%;
+	padding-top: 3.5%;
 }
 .experience div {
 	display: flex;

@@ -1,0 +1,37 @@
+
+/* small nav section with Fontawesome icons*/
+nav {
+	position: absolute;
+	z-index: 100;
+	width: 200px;
+}
+nav i { 
+	display: inline-block;
+	margin: 10%;
+	color: lightgray;
+	opacity: 0.7;
+	cursor: pointer;
+	-webkit-animation-iteration-count: 1;
+	animation-iteration-count: 1;
+}
+nav a + i {
+	margin-left: -2%;
+}
+.container-fluid {
+	padding: 5% 2% 2%;
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(#434343, black); 
+	background: linear-gradient(#434343, black); 
+}
+.card-img {
+	border-radius: 10px;
+}
+.card {
+	background-color: transparent;
+}
+.card-title {
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 2rem;
+	text-shadow: 1px 1px 1px #202020;
+	margin-top: 5rem;
+}
