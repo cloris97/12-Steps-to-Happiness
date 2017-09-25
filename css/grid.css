@@ -14,6 +14,15 @@ nav i {
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
 }
+/* font awesome gradient */
+nav i:before {
+	background: #FC5C7D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #be93c5, #7bc6cc); 
+	background: linear-gradient(to top, #be93c5, #7bc6cc); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: initial; /* reset Font Awesome's display:inline-block */
+}
 nav a + i {
 	margin-left: -2%;
 }

@@ -35,8 +35,21 @@ nav i {
 	-webkit-animation-iteration-count: 1;
 	animation-iteration-count: 1;
 }
+/* font awesome gradient */
+nav i:before {
+	background: #FC5C7D;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #be93c5, #7bc6cc); 
+	background: linear-gradient(to top, #be93c5, #7bc6cc); 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: initial; /* reset Font Awesome's display:inline-block */
+}
 nav a + i {
 	margin-left: -2%;
+}
+section div {
+	display: flex;
+	justify-content: center;
 }
 /* 1. thank */
 .thank {
@@ -46,15 +59,12 @@ nav a + i {
 	background-position: 0 50%;
 	background-size: cover;
 }
-.thank p, .thank h1 {
+.thank p, .thank h1, .thank div {
 	margin-left: 50%;
 	color: #2F81B7;
 }
 .thank h1 {
 	padding-top: 6%;
-}
-.thank div {
-	margin-left: 70%;
 }
 .thank i {
 	color: #2F81B7;
@@ -73,10 +83,6 @@ nav a + i {
 .experience h1 {
 	padding-top: 3.5%;
 }
-.experience div {
-	display: flex;
-	justify-content: center;
-}
 /* 3. give */
 .give {
 	background: url('../img/give.jpg') no-repeat;
@@ -88,14 +94,11 @@ nav a + i {
 .give h1, .give p, .give i {
 	color: #AB2B1E;
 }
-.give h1, .give p {
+.give h1, .give p, .give div {
 	margin-left: 40%;
 }
 .give h1 {
 	padding-top: 27%;
-}
-.give div {
-	margin-left: 65%;
 }
 /* 4. hike */ 
 .hike {
@@ -108,14 +111,11 @@ nav a + i {
 .hike h1, .hike p, .hike i {
 	color: #6D717B;
 }
-.hike h1, .hike p {
+.hike h1, .hike p, .hike div{
 	margin-left: 65%;
 }
 .hike h1 {
 	padding-top: 15%;
-}
-.hike div {
-	margin-left: 77.5%;
 }
 /* 5. help */
 .help {
@@ -146,10 +146,6 @@ nav a + i {
 .meditate h1 {
 	padding-top: 32%;
 }
-.meditate div {
-	display: flex;
-	justify-content: center;
-}
 /* 7. eat well */
 .eat {
 	background: url('../img/eat.jpg') no-repeat;
@@ -165,10 +161,6 @@ nav a + i {
 .eat h1 {
 	padding-top: 32%;
 }
-.eat div {
-	display: flex;
-	justify-content: center;
-}
 /* 8.socialize */
 .socialize {
 	background: url('../img/socialize.jpg') no-repeat;
@@ -182,10 +174,6 @@ nav a + i {
 }
 .socialize h1 {
 	padding-top: 28%;
-}
-.socialize div {
-	display: flex;
-	justify-content: center;
 }
 /* 9. exercise */
 .exercise {
@@ -204,10 +192,6 @@ nav a + i {
 .exercise h1, .exercise p, .exercise div {
 	margin-left: -55%;
 }
-.exercise div {
-	display: flex;
-	justify-content: center;
-}
 /* 10. aim */
 .aim {
 	background: url('../img/aim.jpg') no-repeat;
@@ -221,10 +205,6 @@ nav a + i {
 }
 .aim h1 {
 	padding-top: 20%;
-}
-.aim div {
-	display: flex;
-	justify-content: center;
 }
 /* 11. rest */
 .rest {
@@ -240,10 +220,6 @@ nav a + i {
 }
 .rest h1 {
 	padding-top: 15%;
-}
-.rest div {
-	display: flex;
-	justify-content: center;
 }
 /* 12. smile */
 .smile {
@@ -327,4 +303,107 @@ nav a + i {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity: 1;
+}
+/* media queries */
+@media only screen and (max-width: 768px) {
+	h1, p {
+		text-shadow: 1px 1px #383838;
+	}
+	.thank p, .thank h1 {
+		margin-left: 0;
+	}
+	.thank h1 {
+		padding-top: 6%;
+	}
+	.thank div {
+		margin-left: 70%;
+	}
+	.thank i {
+		color: #2F81B7;
+	}
+	.eat h1, .eat p, .eat div {
+		margin-left: 0;
+	}
+	.eat h1 {
+		padding-top: 60%;
+	}
+	.help {
+		background-position: 70% 50%;
+	}
+	.help h1, .help p {
+		margin-left: 0;
+	}
+	.help h1 {
+		padding-top: 50%;
+	}
+	.hike h1, .hike p, .hike div{
+		margin-left: 0;
+	}
+	.hike h1 {
+		padding-top: 30%;
+	}
+	.experience {
+		background-position: 60% 50%;
+	}
+	.experience h1 {
+		padding-top: 10%;
+	}
+	.smile {
+		background-position: 30% 60%;
+	}
+	.smile h1, .smile p {
+		margin-left: 0;
+	}
+	.smile h1 {
+		padding-top: 20%;
+	}
+	.give h1, .give p, .give div {
+		margin-left: 0;
+	}
+	.give h1 {
+		padding-top: 60%;
+	}
+	.meditate {
+		background-position: 50% 90%;
+	}
+	.meditate h1 {
+		padding-top: 100%;
+	}
+	.exercise {
+		background-position: 60% 50%;
+	}
+	.exercise h1 {
+		padding-top: 75%;
+	}
+	.exercise h1, .exercise p, .exercise div {
+		margin-left: 0;
+	}
+	.thank p, .thank h1, .thank div {
+		margin-left: 0;
+	}
+	.thank h1 {
+		padding-top: 10%;
+	}
+	.aim {
+		background-position: 50% 30%;
+	}
+	.aim h1 {
+		padding-top: 60%;
+	}
+	.rest {
+		background-position: 60% 40%;
+	}
+	.rest h1, .rest p {
+		margin-left: 0;
+	}
+	.rest h1 {
+		padding-top: 60%;
+	}
+	.socialize {
+		background-position: 50% 60%;
+	}
+	.socialize h1 {
+		padding-top: 70%;
+	}
+
 }
