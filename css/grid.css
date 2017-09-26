@@ -55,3 +55,9 @@ nav a + i {
 .btn:active {
 	background-color: green;
 }
+/* media queries */
+@media only screen and (max-width: 768px) {
+	.container-fluid {
+		padding: 11% 0 2%;
+	}
+}
